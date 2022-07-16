@@ -1,0 +1,582 @@
+/* 
+======================================================
+Global Access
+======================================================
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --color1: #0C0C0C;
+    --color2: #FFFFFF;
+    --color3: #fcfcfc70;
+    --color4: rgba(188, 188, 188, 0.632);
+    --color5: #95C20F;
+
+
+    --font1: 'Open Sans', sans-serif;
+    --font2: 'Montserrat', sans-serif;
+}
+
+/* 
+======================================================
+Navbar
+======================================================
+*/
+nav.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 20;
+}
+
+nav.navbar .logo {
+    height: 80px;
+    width: 90px;
+}
+
+.navbar .logo img {
+    height: 100%;
+    width: 100%;
+}
+
+nav.navbar .nav-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    list-style: none;
+}
+
+nav.navbar .nav-list>li {
+    position: relative;
+    margin-top: 10px;
+}
+
+nav.navbar .nav-list>li a {
+    font-size: 1.6rem;
+    margin-right: 60px;
+    font-family: var(--font2);
+    color: #0C0C0C;
+    font-weight: 560;
+    text-decoration: none !important;
+    padding: 24px 0;
+}
+
+nav.navbar .nav-list li a i {
+    margin-left: 12px;
+}
+nav.navbar .nav-list li:nth-child(5) {
+    margin-left: 90px;
+}
+nav.navbar .nav-list li:nth-child(5) a {
+    padding: 7px 12px;
+    color: #fff;
+    background-color: var(--color5);
+    top: 0;
+    font-weight: 700;
+    transition: all .3s ease;
+}
+
+nav.navbar .nav-list li:nth-child(5) a:hover {
+    position: relative;
+    top: -5px;
+}
+
+nav.navbar .menu {
+    transition: all .4s;
+    position: relative;
+    transform: translateY(-5px);
+}
+
+nav.navbar .menu a {
+    padding: 10px 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .2);
+    font-size: 1.7rem;
+    color: #0C0C0C;
+    font-family: var(--font2);
+    text-decoration: none;
+}
+
+nav.navbar .menu.menu:hover {
+    transform: translateY(-15px);
+}
+
+/* 
+======================================================
+Home Section
+======================================================
+*/
+
+.carousel-inner {
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 51% 100%, 0 90%);
+}
+
+.carousel-item {
+    height: 90vh;
+    min-height: 300px;
+    background: no-repeat scroll center scroll;
+    -webkit-background-size: cover;
+    background-size: cover;
+    position: relative;
+}
+
+.carousel-item::before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.6;
+}
+
+.carousel-caption {
+    bottom: 140px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.carousel-caption h1 {
+    font-size: 32px;
+    letter-spacing: 1.2px;
+    font-family: var(--font2);
+    font-weight: 400 !important;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.carousel-caption p {
+    font-size: 18px;
+    font-family: var(--font2);
+}
+
+.carousel-caption .slider-btn {
+    margin-top: 30px;
+}
+
+.carousel-caption .slider-btn a.btn {
+    padding: 10px 28px;
+    color: #fff;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-family: var(--font2);
+    font-weight: 600;
+    letter-spacing: 1px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    background: var(--color3);
+}
+
+/* 
+======================================================
+Cards
+======================================================
+*/
+
+section.cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+    /* background: #eee; */
+}
+
+section.cards .left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+section.cards .left .img {
+    height: 300px;
+    width: 400px;
+    margin-left: 40px;
+}
+
+section.cards .right {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100vh;
+}
+section.cards .right .content {
+    margin-left: 160px;
+}
+
+section.cards .right .content#content-1 {
+    position: relative;
+    top: -60px;
+}
+section.cards .right .content#content-2 {
+    position: relative;
+    top: -60px;
+}
+section.cards .right .content h3{
+    color: var(--color5);
+    font-size: 30px;
+    font-family: var(--font2);
+}   
+section.cards .right .content p{
+    color: #636363;
+    font-size: 18px;
+    font-family: var(--font2);
+}   
+/* 
+======================================================
+About Section
+======================================================
+*/
+
+section.about-us {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+}
+
+section.about-us .left {
+    height: 100vh;
+    width: 70%;
+    position: relative;
+    top: 10px;
+}
+
+section.about-us .left img {
+    position: relative;
+    margin-top: -15%;
+}
+
+section.about-us .right {
+    width: 40%;
+}
+
+section.about-us h3 {
+    color: var(--color5);
+    font-family: var(--font2);
+    font-size: 33px;
+}
+
+section.about-us p {
+    padding-right: 60px;
+    color: #777;
+    font-family: var(--font1);
+    font-size: 18px;
+}
+
+/* 
+======================================================
+Value Section
+======================================================
+*/
+
+section.values {
+    padding: 20px;
+    height: 100%;
+}
+
+section.values h2 {
+    font-family: var(--font1);
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    margin: 30px 0;
+    font-size: 3.4rem;
+}
+
+section.values h2 span {
+    color: var(--color5);
+}
+
+section.values .container {
+    height: 100vh;
+    width: 100%;
+    background: url('../images/PPT_PIC/core\ values-01.png') no-repeat center center/ cover;
+    object-fit: cover;
+}
+
+.extra-knowl .left {
+    width: 60%;
+    height: 100vh !important;
+}
+
+/* 
+======================================================
+Map
+======================================================
+*/
+
+section.map .container {
+    height: 105vh;
+    width: 100%;
+    background: url('../images/PPT_PIC/map_02-01.png') no-repeat center center/ cover;
+}
+
+/* 
+======================================================
+Other informatioon
+======================================================
+*/
+section.class {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.class .left {
+    height: 100vh;
+    width: 70%;
+    position: relative;
+    left: 60px;
+}
+
+.class .right {
+    height: 80vh;
+    padding: 0px 20px;
+    width: 50%;
+    margin-right: 20px;
+}
+
+.class .right ul {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 100%;
+}
+
+.class .right ul li {
+    font-size: 14px;
+    font-family: var(--font2);
+    padding-right: 100px;
+}
+
+.class .right ul li:nth-child(odd) {
+    color: var(--color5);
+}
+
+/* 
+======================================================
+Sector
+======================================================
+*/
+
+section.sectors {
+    padding: 20px;
+}
+
+section.sectors h2 {
+    font-family: var(--font2);
+    text-align: center;
+    margin: 30px 0;
+    margin-bottom: 50px;
+    font-size: 3.4rem;
+}
+
+section.sectors h2 span {
+    color: var(--color5);
+}
+
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    margin-bottom: 20px;
+}
+
+
+.box {
+    height: 220px;
+    width: 400px;
+}
+
+.card {
+    /* cursor:pointer; */
+    border: none;
+}
+
+.front, .back {
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    position: absolute;
+    transition: all .6s linear;
+}
+
+.front {
+    background: url('../images/bg3.jpg') no-repeat center center/ cover;
+    transform: perspective(600px) rotateY(0deg);
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.front h3 {
+    font-size: 3.3rem;
+    font-family: var(--font1);
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 2;
+    color: #fff;
+    font-weight: 800 !important;
+}
+
+.front::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.308);
+}
+
+.back {
+    background: url('../images/bg2.jpg')no-repeat center center/ cover;
+    transform: perspective(600px) rotateY(180deg);
+    position: relative;
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    padding: 20px;
+}
+
+.back p {
+    font-size: 14px;
+    text-align: center;
+    z-index: 3;
+    /* transform: perspective(1000px); */
+    transform-style: preserve-3d;
+}
+
+.card:hover>.front {
+    transform: perspective(600px) rotateY(-180deg);
+
+}
+
+.card:hover>.back {
+    transform: perspective(600px) rotateY(0deg);
+}
+
+.back::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.753);
+}
+
+.video {
+    height: 100vh;
+    width: 100%;
+}
+
+/* 
+============================================================
+Footer Section
+============================================================
+*/
+
+.portfolio_container {
+    height: 100vh;
+}
+
+/* 
+============================================================
+Footer Section
+============================================================
+*/
+footer {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    border-top: 1px solid #111;
+}
+
+footer .heading {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+footer .heading .logo {
+    height: 100px;
+    width: 100px;
+}
+
+footer .heading p {
+    padding-right: 20px;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+footer .right_bar {
+    width: 56%;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .right_bar ul h3 {
+    font-size: 20px;
+    color: var(--color5);
+    margin-bottom: 20px;
+}
+
+footer .right_bar ul li {
+    list-style-type: none;
+    margin-top: 10px;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+footer .right_bar ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.copyright_and_links {
+    display: flex;
+    padding: 100px 100px;
+    padding-bottom: 40px;
+    justify-content: space-between;
+    align-items: center;
+    background: #000;
+}
+
+.copyright_and_links span {
+    font-size: 14px;
+    color: #636363;
+}
+
+.copyright_and_links .social_links a {
+    font-size: 15px;
+    margin-right: 17px;
+    color: #636363;
+    text-decoration: none;
+}
+
+.copyright_and_links .social_links a i {
+    pointer-events: none;
+}
+
+.copyright_and_links .social_links a:hover {
+    color: #E6E6E6;
+}
