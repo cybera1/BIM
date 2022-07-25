@@ -1,0 +1,956 @@
+/* 
+======================================================
+Global Access
+======================================================
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --color1: #0C0C0C;
+    --color2: #FFFFFF;
+    --color3: #fcfcfc70;
+    --color4: rgba(188, 188, 188, 0.632);
+    --color5: #95C20F;
+
+
+    --font1: 'Open Sans', sans-serif;
+    --font2: 'Montserrat', sans-serif;
+    --font3: 'Raleway', sans-serif;
+}
+
+#particles-js {
+    height: 100vh;
+    width: 35%;
+    position: fixed;
+    top: 0;
+}
+
+/* 
+======================================================
+Navbar
+======================================================
+*/
+nav.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 20;
+}
+
+nav.service_navbar {
+    box-shadow: 0 2px 20px rgba(0, 0, 0, .2);
+}
+
+nav.navbar .hambarger {
+    display: none;
+}
+
+nav.navbar .logo {
+    height: 80px;
+    width: 90px;
+}
+
+.navbar .logo img {
+    height: 110%;
+    width: 110%;
+}
+
+nav.navbar .nav-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    list-style: none;
+}
+
+nav.navbar .mobile_nav {
+    display: none;
+}
+
+nav.navbar .nav-list>li {
+    position: relative;
+    margin-top: 10px;
+}
+
+nav.navbar .nav-list>li a {
+    font-size: 1.9rem;
+    margin-right: 60px;
+    font-family: var(--font2);
+    color: #0C0C0C;
+    font-weight: 560;
+    text-decoration: none !important;
+    padding: 24px 0;
+}
+
+nav.navbar .nav-list li a i {
+    margin-left: 12px;
+}
+
+nav.navbar .nav-list li:nth-child(6) {
+    margin-left: 90px;
+}
+
+nav.navbar .nav-list li:nth-child(6) a {
+    padding: 8px 17px;
+    border: 3px solid var(--color5);
+    color: var(--color5);
+    font-weight: 700;
+    border-radius: 5px;
+    transition: all .3s ease;
+}
+nav.navbar .nav-list li:nth-child(6) a:hover {
+    background: var(--color5);
+    color: var(--color2);
+}
+nav.navbar .menu {
+    transition: all .4s;
+    position: relative;
+    transform: translateY(-5px);
+}
+
+nav.navbar .menu a {
+    padding: 10px 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .2);
+    font-size: 1.7rem;
+    color: #0C0C0C;
+    font-family: var(--font2);
+    text-decoration: none;
+}
+
+nav.navbar .menu.menu:hover {
+    transform: translateY(-15px);
+}
+
+/* 
+======================================================
+Home Section
+======================================================
+*/
+
+.carousel-inner {
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 51% 100%, 0 90%);
+}
+
+.carousel-item {
+    height: 90vh;
+    min-height: 300px;
+    background: no-repeat scroll center scroll;
+    -webkit-background-size: cover;
+    background-size: cover;
+    position: relative;
+}
+
+.carousel-item::before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.6;
+}
+
+.carousel-caption {
+    bottom: 140px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.carousel-caption h1 {
+    font-size: 32px;
+    letter-spacing: 1.2px;
+    font-family: var(--font2);
+    font-weight: 400 !important;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.carousel-caption p {
+    font-size: 18px;
+    font-family: var(--font2);
+}
+
+.carousel-caption .slider-btn {
+    margin-top: 30px;
+}
+
+.carousel-caption .slider-btn a.btn {
+    padding: 10px 28px;
+    color: #fff;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-family: var(--font2);
+    font-weight: 600;
+    letter-spacing: 1px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    background: var(--color3);
+}
+
+/* 
+======================================================
+Cards
+======================================================
+*/
+
+section.cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+    /* background: #eee; */
+}
+
+section.cards .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+section.cards .left .img {
+    height: 300px;
+    width: 400px;
+    margin-left: 40px;
+}
+
+section.cards .right {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100vh;
+}
+
+section.cards .right .content {
+    margin-left: 160px;
+}
+
+section.cards .right .content#content-1 {
+    position: relative;
+    top: -60px;
+}
+
+section.cards .right .content#content-2 {
+    position: relative;
+    top: -60px;
+}
+
+section.cards .right .content h3 {
+    color: var(--color5);
+    font-size: 30px;
+    font-family: var(--font2);
+}
+
+section.cards .right .content p {
+    color: #636363;
+    font-size: 18px;
+    font-family: var(--font2);
+}
+
+/* 
+======================================================
+About Section
+======================================================
+*/
+
+section.about-us {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: none;
+    padding: 40px;
+}
+
+section.about-us .left {
+    height: 100vh;
+    width: 70%;
+    position: relative;
+    top: 10px;
+}
+
+section.about-us .left img {
+    position: relative;
+    margin-top: -15%;
+}
+
+section.about-us .right {
+    width: 40%;
+}
+
+section.about-us h3 {
+    color: var(--color5);
+    font-family: var(--font2);
+    font-size: 33px;
+}
+
+section.about-us p {
+    padding-right: 60px;
+    color: #777;
+    font-family: var(--font1);
+    font-size: 18px;
+}
+
+/* 
+======================================================
+Value Section
+======================================================
+*/
+
+section.values {
+    padding: 20px;
+    height: 100%;
+}
+
+section.values h2 {
+    font-family: var(--font1);
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    margin: 30px 0;
+    font-size: 3.4rem;
+}
+
+section.values h2 span {
+    color: var(--color5);
+}
+
+section.values .container {
+    height: 100vh;
+    width: 100%;
+    background: url('../images/PPT_PIC/core\ values-01.png') no-repeat center center/ cover;
+    object-fit: cover;
+}
+
+.extra-knowl .left {
+    width: 60%;
+    height: 100vh !important;
+}
+
+/* 
+======================================================
+Map
+======================================================
+*/
+
+section.map .container {
+    height: 105vh;
+    width: 100%;
+    background: url('../images/PPT_PIC/map_02-01.png') no-repeat center center/ cover;
+}
+
+/* 
+======================================================
+Other informatioon
+======================================================
+*/
+section.class {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.class .left {
+    height: 100vh;
+    width: 70%;
+    position: relative;
+    left: 60px;
+}
+
+.class .right {
+    height: 80vh;
+    padding: 0px 20px;
+    width: 50%;
+    margin-right: 20px;
+}
+
+.class .right ul {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 100%;
+}
+
+.class .right ul li {
+    font-size: 14px;
+    font-family: var(--font2);
+    padding-right: 100px;
+}
+
+.class .right ul li:nth-child(odd) {
+    color: var(--color5);
+}
+
+/* 
+======================================================
+Sector
+======================================================
+*/
+
+section.sectors {
+    padding: 20px;
+}
+
+section.sectors h2 {
+    font-family: var(--font2);
+    text-align: center;
+    margin: 30px 0;
+    margin-bottom: 50px;
+    font-size: 3.4rem;
+}
+
+section.sectors h2 span {
+    color: var(--color5);
+}
+
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    margin-bottom: 20px;
+}
+
+
+.box {
+    height: 220px;
+    width: 400px;
+}
+
+.card {
+    /* cursor:pointer; */
+    border: none;
+}
+
+.front, .back {
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    position: absolute;
+    transition: all .6s linear;
+}
+
+.front {
+    background: url('../images/bg3.jpg') no-repeat center center/ cover;
+    transform: perspective(600px) rotateY(0deg);
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.front h3 {
+    font-size: 3.3rem;
+    font-family: var(--font1);
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 2;
+    color: #fff;
+    font-weight: 800 !important;
+}
+
+.front::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.308);
+}
+
+.back {
+    background: url('../images/bg2.jpg')no-repeat center center/ cover;
+    transform: perspective(600px) rotateY(180deg);
+    position: relative;
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    padding: 20px;
+}
+
+.back p {
+    font-size: 14px;
+    text-align: center;
+    z-index: 3;
+    /* transform: perspective(1000px); */
+    transform-style: preserve-3d;
+}
+
+.card:hover>.front {
+    transform: perspective(600px) rotateY(-180deg);
+
+}
+
+.card:hover>.back {
+    transform: perspective(600px) rotateY(0deg);
+}
+
+.back::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.753);
+}
+
+.video {
+    height: 100vh;
+    width: 100%;
+}
+
+/* 
+============================================================
+Services Section
+============================================================
+*/
+
+section.bim-services {
+    padding: 40px;
+    pointer-events: none;
+}
+
+section.bim-services .first {
+    display: flex;
+    align-items: center;
+}
+
+section.bim-services .left {
+    display: flex;
+    flex-direction: column;
+} 
+
+section.bim-services .left .first_,
+section.bim-services .left .second_,
+section.bim-services .left .third_ {
+    display: flex;
+    z-index: 5;
+    
+}
+
+
+section.bim-services .left .second_ .right_ {
+    position: relative;
+}
+
+section.bim-services .left .second_ .right_ img{
+    position: absolute;
+    top: -60%;
+    left: 10px;
+}
+section.bim-services .right {
+    margin-left: 150px;
+}
+section.bim-services .right h3{
+    font-family: var(--font3);
+    font-size: 4rem;
+    font-weight: 800 !important;
+    color: var(--color5);
+}
+
+section.bim-services .right p {
+    margin-top: 10px;
+    color: #888;
+    font-size: 2rem;
+    font-family: var(--font2);
+}
+
+section.bim-services .right ul li {
+    font-size: 1.8rem;
+    font-family: var(--font1);
+    color: #aaa;
+    margin-top: 10px;
+}
+
+section.bim-services .right ul li:nth-child(odd) {
+    color: var(--color5);
+}
+
+section.bim-services .right .box-2 {
+    margin-top: 40px;
+}
+section.bim-services .right  p {
+    position: relative;
+    margin-left: -10px;
+}
+/* 
+============================================================
+Career Section
+============================================================
+*/
+
+section.career {
+    height: 100vh;
+    width: 100%;
+    padding: 20px;
+}
+
+section.career h3 {
+    text-align: center;
+    font-size: 4rem;
+    font-family: var(--font3);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    color: #333;
+}
+
+section.career form {
+    width: 100%;
+}
+section.career form .input-sec {
+    width: 100%;
+    margin: 40px 0;
+}
+section.career form .input-sec label {
+    font-size: 1.7rem;
+    font-family: var(--font3);
+    margin-bottom: 6px;
+}
+section.career form .input-sec input {
+    width: 100%;
+    font-size: 1.8em;
+    border: 1.5px solid #aaa;
+    height: 35px;
+    outline: none;
+    padding: 2px 10px;
+    font-family: var(--font2);
+    border-radius: 5px;
+    transition: all .2s ease;
+}
+
+section.career form .input-sec input:focus {
+    box-shadow: 0px 0px 0px 3px var(--color5);
+
+}
+
+section.career form button {
+    padding: 10px 80px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-family: var(--font3);
+    letter-spacing: 2px;
+    background: var(--color5);
+    color: #fff;
+    font-weight: 700;
+    transition: all .4s ease;
+}
+section.career form button:hover {
+    background-color: #789d08;
+}
+
+
+/* 
+============================================================
+Contact Us Section
+============================================================
+*/
+
+.contact_us {
+    height: 100vh;
+    padding: 20px;
+    background: #98efb16e;
+}
+
+.contact_us h3.heading {
+    text-align: center;
+    font-size: 4rem;
+    font-family: var(--font3);
+    font-weight: 500;
+    letter-spacing: 1.3px;
+    color: #333;
+}
+
+.contact_us h3.heading span.sub {
+    color: var(--color5);
+}
+
+.container.contact_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container.contact_container .left {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.container.contact_container .left a {
+    margin-top: 40px;
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--color5);
+    font-family: var(--font2);
+}
+
+.container.contact_container .left a span.content {
+    color: green;
+    margin-left: 10px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.container.contact_container form.contact_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+form.contact_form .input_sec input {
+    width: 350px;
+    margin-top: 40px;
+    height: 50px;
+}
+
+form.contact_form>input {
+    height: 50px;
+    margin: 40px 0;
+}
+
+form.contact_form input,
+form.contact_form textarea {
+    padding: 10px;
+    padding-left: 16px;
+    resize: none;
+    border-radius: 25px;
+    border: none;
+    font-size: 15px;
+    font-family: var(--font3);
+    outline: none;
+    transition: all .2s ease;
+}
+
+form.contact_form textarea {
+    height: 200px;
+    margin-bottom: 40px;
+    padding: 18px;
+    font-style: italic;
+}
+
+form.contact_form input:focus,
+form.contact_form textarea:focus {
+    border: 2px solid var(--color5);
+}
+
+form.contact_form .input_sec input:nth-child(1) {
+    margin-right: 15px;
+}
+
+form.contact_form .submit_btn button {
+    width: 220px;
+    height: 45px;
+    background: var(--color5);
+    text-transform: uppercase;
+    font-family: var(--font2);
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-size: 17px;
+    border: none;
+    border-radius: 30px;
+    transition: all .3s ease;
+}
+
+form.contact_form .submit_btn button:hover {
+    background: #789d08;
+}
+
+
+
+
+
+
+
+
+/* 
+============================================================
+Portfolio Section
+============================================================
+*/
+
+.portfolio_container {
+    height: 100vh;
+}
+
+/* 
+============================================================
+Footer Section
+============================================================
+*/
+footer {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    border-top: 1px solid #111;
+}
+
+footer .heading {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+footer .heading .logo {
+    height: 100px;
+    width: 100px;
+}
+
+footer .heading p {
+    padding-right: 20px;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+footer .right_bar {
+    width: 56%;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .right_bar ul h3 {
+    font-size: 20px;
+    color: var(--color5);
+    margin-bottom: 20px;
+}
+
+footer .right_bar ul li {
+    list-style-type: none;
+    margin-top: 10px;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+footer .right_bar ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.copyright_and_links {
+    display: flex;
+    padding: 100px 100px;
+    padding-bottom: 40px;
+    justify-content: space-between;
+    align-items: center;
+    background: #000;
+}
+
+.copyright_and_links span {
+    font-size: 14px;
+    color: #636363;
+}
+
+.copyright_and_links .social_links a {
+    font-size: 15px;
+    margin-right: 17px;
+    color: #636363;
+    text-decoration: none;
+}
+
+.copyright_and_links .social_links a i {
+    pointer-events: none;
+}
+
+.copyright_and_links .social_links a:hover {
+    color: #E6E6E6;
+}
+
+/* 
+============================================================
+Responsiveness
+============================================================
+*/
+
+@media screen and (max-width: 1025px) {
+
+    /* --------- Navbar --------- */
+    body {
+        overflow-x: hidden;
+    }
+    nav.navbar {
+        position: relative;
+    }
+
+    nav.navbar .nav-list {
+        display: none;
+    }
+
+    nav.navbar .mobile_nav {
+        position: absolute;
+        transform: translateX(100%);
+        top: 100%;
+        right: 0;
+        width: 250px;
+        height: 100vh;
+        background: #fff;
+        display: flex;
+        padding: 70px 60px;
+        transition: all .6s ease;
+    }
+    nav.navbar .hambarger {
+        display: block;
+        cursor: pointer;
+    }
+
+    nav.navbar .hambarger i {
+        margin-right: 30px;
+        font-size: 34px;
+        margin-top: 5px;
+        color: #555;
+        font-weight: 700;
+    }
+    nav.navbar .mobile_nav .list {
+        position: relative;
+        transform: translateX(150%);
+        transition: all .4s ease;
+    }
+    nav.navbar .mobile_nav .list li {
+        list-style: none;
+        font-size: 20px;
+        margin-top: 25px;
+    }
+    
+    nav.navbar .mobile_nav .list li a {
+        color: var(--color5);
+        font-family: var(--font2);
+        text-decoration: none;
+        letter-spacing: 1px;
+        font-weight: 900 !important;
+    }
+    
+    nav.navbar .mobile_nav .list li a:active {
+        color: #789d08;
+    }
+    
+    nav.navbar .mobile_nav.open {
+        transform: translateX(0%);
+        transition: all .8s ease;
+    }
+    
+    nav.navbar .mobile_nav.open .list {
+        /* animation: open_list .5s linear alternate both; */
+        transition-delay: .5s;
+        transform: translateX(0%);
+    }
+
+    
+}
